@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <!-- Toggle buttons -->
+        <div class="toggle-container">
+            <div class="toggle-slider" id="toggleSlider"></div>
+            <button class="toggle-btn active" id="loginToggle">Login</button>
+            <button class="toggle-btn" id="signupToggle">Sign Up</button>
+        </div>
+
+        <div class="form-container">
+            <!-- Success message -->
+            <div class="success-message" id="successMessage">
+                Welcome! You've successfully logged in.
+            </div>
+
+            <!-- Login Form -->
+            <form class="form" id="loginForm">
+                <div class="social-login">
+                    <button type="button" class="social-btn" onclick="handleSocialLogin('google')">
+                        <span>🔍</span> Google
+                    </button>
+                    <button type="button" class="social-btn" onclick="handleSocialLogin('facebook')">
+                        <span>📘</span> Facebook
+                    </button>
+                </div>
+
+                <div class="divider">
+                    <span>or login with email</span>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Login</button>
+
+                <div class="forgot-password">
+                    <a href="#" onclick="showForgotPassword()">Forgot your password?</a>
+                </div>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form class="form hidden" id="signupForm">
+                <div class="social-login">
+                    <button type="button" class="social-btn" onclick="handleSocialLogin('google')">
+                        <span>🔍</span> Google
+                    </button>
+                    <button type="button" class="social-btn" onclick="handleSocialLogin('facebook')">
+                        <span>📘</span> Facebook
+                    </button>
+                </div>
+
+                <div class="divider">
+                    <span>or create account</span>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
